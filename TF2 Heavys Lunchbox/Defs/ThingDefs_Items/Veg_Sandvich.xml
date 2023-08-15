@@ -1,0 +1,42 @@
+<!--  Hi There i am the person that made this and i see you there looking at the code maybe even making edits to it. If you like you could go to the workshop page and go to the disscusion tab and suggest your changes there?  -->
+<Defs>
+  <ThingDef ParentName="MedicineBase">
+    <defName>ROBTRG_Sandvich_TF_Veg</defName>
+    <label>Vegetarian Sandvich</label>
+    <description>This is the sandvich. The Sandvich acts like medicine since in TF2 when eaten it restores 300 health so i decided to replicate that by making it slightly better then herbal meds. This version replaces the meat with extra of the plant/animal product ingredents. Note the cheese quality dose not matter even the worst cheese will work. Simply dont waste your legendery quality cheese on this</description>
+	<possessionCount>3</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/Veg_Sandvich</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>1</Flammability>
+      <MedicalPotency>0.80</MedicalPotency>
+      <MedicalQualityMax>0.90</MedicalQualityMax>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>400</WorkToMake>
+    </statBases>
+	<costList>
+      <VCE_RawCabbage>10</VCE_RawCabbage>
+      <VCE_RawTomatoes>8</VCE_RawTomatoes>
+      <VCE_Cheese>2</VCE_Cheese>
+	  <VCE_Flour>30</VCE_Flour>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <recipeUsers>
+        <li>ElectricStove</li>	
+		<li>FueledStove</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Cooking>8</Cooking>
+      </skillRequirements>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+  </ThingDef>
+</Defs>
