@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+	<RecipeDef>
+		<defName>TSP_TF2_Sandvich_Cook</defName>
+		<label>make Sandvich</label>
+		<description>Fix a delicious Sandvich Edible Device, perfect for all one's healing needs.</description>
+		<jobString>Fixing Sandvich</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>VCE_CannedMeat</li>
+					<li>VCE_CannedFish</li>
+					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		  </li>
+		  <li>
+			<filter>
+			  <categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li> <!-- Okay, okay. I know it says "milk tofu", but the Mod's author doesn't speak English. It's cheese. I swear. -->
+			  </thingDefs>
+			  <disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			  </disallowedThingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+			  </thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+			  </thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			  </thingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li>VCE_CannedMeat</li>
+				<li>VCE_CannedFish</li>
+				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li>VCE_Cheese</li>
+				<li>VCE_Flour</li>
+				<li>VCE_CannedMeat</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>Campfire</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+		</researchPrerequisites>
+		<products>
+			<ROBTRG_Sandvich_TF>2</ROBTRG_Sandvich_TF> <!-- As it is cut in two -->
+		</products>
+		<skillRequirements>
+			<Cooking>3</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_TF2_Sandvich_Cook_Bulk</defName>
+		<label>make Sandviches in bulk (x8)</label>
+		<description>Fix delicious Sandvich Edible Devices, perfect for all one's healing needs.</description>
+		<jobString>Fixing Sandviches</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>VCE_CannedMeat</li>
+					<li>VCE_CannedFish</li>
+					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+			  <categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li> <!-- Okay, okay. I know it says "milk tofu", but the Mod's author doesn't speak English. It's cheese. I swear. -->
+			  </thingDefs>
+			  <disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			  </disallowedThingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+			  </thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+			  </thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			  </thingDefs>
+			</filter>
+			<count>14</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li>VCE_CannedMeat</li>
+				<li>VCE_CannedFish</li>
+				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li>VCE_Cheese</li>
+				<li>VCE_Flour</li>
+				<li>VCE_CannedMeat</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>Campfire</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		<products>
+			<ROBTRG_Sandvich_TF>8</ROBTRG_Sandvich_TF> <!-- As it is cut in two -->
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_TF2_Sandvich_Cook_SuperBulk</defName>
+		<label>make Sandviches in bulk (x16)</label>
+		<description>Fix delicious Sandvich Edible Devices, perfect for all one's healing needs.</description>
+		<jobString>Fixing Sandviches</jobString>
+		<workAmount>900</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>VCE_CannedMeat</li>
+					<li>VCE_CannedFish</li>
+					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+			  <categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li> <!-- Okay, okay. I know it says "milk tofu", but the Mod's author doesn't speak English. It's cheese. I swear. -->
+			  </thingDefs>
+			  <disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			  </disallowedThingDefs>
+			</filter>
+			<count>8</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+			  </thingDefs>
+			</filter>
+			<count>50</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+			  </thingDefs>
+			</filter>
+			<count>30</count>
+		  </li>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			  </thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li MayRequire="sz.menggu.expanded">MG_NaiDouFu</li>
+				<li>VCE_CannedMeat</li>
+				<li>VCE_CannedFish</li>
+				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li>VCE_Flour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li>VCE_RawCabbage</li>
+				<li MayRequire="dajian.chiteaditional.expanded">RawDaBaiCai</li> <!-- Oriental cabbage -->
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li> <!-- Not good enough for a sandwich worthy of the Heavy Weapons Man! -->
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>VCE_RawCabbage</li>
+				<li>VCE_RawTomatoes</li>
+				<li>VCE_Cheese</li>
+				<li>VCE_Flour</li>
+				<li>VCE_CannedMeat</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Cabbage</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>Campfire</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+		<products>
+			<ROBTRG_Sandvich_TF>16</ROBTRG_Sandvich_TF> <!-- As it is cut in two -->
+		</products>
+	</RecipeDef>
+</Defs>

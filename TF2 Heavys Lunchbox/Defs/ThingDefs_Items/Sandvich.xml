@@ -1,43 +1,58 @@
-<!--  Hi There i am the person that made this and i see you there looking at the code maybe even making edits to it. If you like you could go to the workshop page and go to the disscusion tab and suggest your changes there?  -->
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ^^^ TS: ROBTRG, the above code is the XML Declaration. Without it being added to EVERY XML file you write, "Rimworld" can cascade into tons of errors or even crashed. -->
+
+<!-- Hi there! I am the person that made this and I see you there looking at the code! Maybe you are even making edits to it! If you like you could go to the workshop page,and go to the disscusion tab, and suggest your changes there? -->
+<!-- The Sandvich acts like medicine since in TF2 when eaten it restores 300 health so i decided to replicate that by making it slightly better then herbal meds -->
+
 <Defs>
-  <ThingDef ParentName="MedicineBase">
-    <defName>ROBTRG_Sandvich_TF</defName>
-    <label>Sandvich</label>
-    <description>This is the sandvich. The Sandvich acts like medicine since in TF2 when eaten it restores 300 health so i decided to replicate that by making it slightly better then herbal meds</description>
-	<possessionCount>3</possessionCount>
-    <graphicData>
-      <texPath>Things/Item/Resource/Medicine/Sandvich</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.85</drawSize>
-    </graphicData>
-    <techLevel>Industrial</techLevel>
-    <statBases>
-      <MarketValue>4</MarketValue>
-      <Mass>0.1</Mass>
-      <Flammability>1</Flammability>
-      <MedicalPotency>0.80</MedicalPotency>
-      <MedicalQualityMax>0.90</MedicalQualityMax>
-      <DeteriorationRate>2</DeteriorationRate>
-      <WorkToMake>400</WorkToMake>
-    </statBases>
-	<costList>
-      <VCE_RawCabbage>5</VCE_RawCabbage>
-      <VCE_RawTomatoes>4</VCE_RawTomatoes>
-      <VCE_Cheese>1</VCE_Cheese>
-	  <VCE_Flour>30</VCE_Flour>
-	  <VCE_CannedMeat>10</VCE_CannedMeat>
-    </costList>
-    <recipeMaker>
-      <workSpeedStat>CookSpeed</workSpeedStat>
-      <workSkill>Cooking</workSkill>
-      <recipeUsers>
-        <li>ElectricStove</li>	
-		<li>FueledStove</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Cooking>6</Cooking>
-      </skillRequirements>
-      <bulkRecipeCount>4</bulkRecipeCount>
-    </recipeMaker>
-  </ThingDef>
+	<ThingDef ParentName="MedicineBase">
+		<defName>ROBTRG_Sandvich_TF</defName>
+		<label>Sandvich Edible Device</label>
+		<description>This is the Vegetarian Sandvich Edible Device, or "Sandvich" for short. It is a great tool for a Pawn defending an area, as it gives him the ability to replenish health between enemy waves. First deployed in Old Earth warfare approximately three thousand five hundred years ago, the dish has served for centuries as an invaluable life saver. Mercenaries in particular treasure it. \n \n This delicacy has a phenomenal healing effect to those who consume it. A proper Sandvich cannot be made with just any meat: potted meat spread, canned and smeared onto the bread, gives that extra special flavor that makes its consumer delighted! Its medical potency exceeds that of mere Herbal Medicine.</description>
+		<possessionCount>3</possessionCount>
+		<graphicData>
+			<texPath>Things/Item/Resource/Medicine/Sandvich</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.89</drawSize>
+		</graphicData>
+		<uiIconPath>UI/ItemIcons/TSP_Sandvich_Icon</uiIconPath>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<MarketValue>34</MarketValue>
+			<Mass>0.01</Mass>
+			<Flammability>1</Flammability>
+			<MedicalPotency>0.80</MedicalPotency>
+			<MedicalQualityMax>0.90</MedicalQualityMax>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Nutrition>2</Nutrition>
+		</statBases>
+		<ingestible>
+			<!-- I mean, it IS food, after all... but its chief purpose is medicine. As such, Pawns will really only eat it if you tell them to do that, OR they are starving. -->
+			<foodType>Meal, Processed, Liquor</foodType>
+			<preferability>DesperateOnly</preferability>
+			<joyKind>Gluttonous</joyKind>
+			<joy>1</joy>
+			<baseIngestTicks>300</baseIngestTicks>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestHoldUsesTable>true</ingestHoldUsesTable>
+			<ingestCommandString>Get Strong!</ingestCommandString>
+			<ingestReportString>NOM NOM NOM</ingestReportString>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<tableDesired>true</tableDesired>
+			<specialThoughtDirect>TSP_TF2_NOMNOMNOM</specialThoughtDirect>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>1</offset>
+				</li>
+			</outcomeDoers>
+			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps Inherit="False">
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

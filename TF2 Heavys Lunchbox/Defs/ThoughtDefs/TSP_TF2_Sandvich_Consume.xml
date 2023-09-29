@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-0.50" ?>
+
+<Defs>
+	<ThoughtDef>
+		<defName>TSP_TF2_NOMNOMNOM</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>Sandvich Makes You Strong</label>
+				<description>THAT WAS DELICIOUS! Today is good day!</description>
+				<baseMoodEffect>14</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>
