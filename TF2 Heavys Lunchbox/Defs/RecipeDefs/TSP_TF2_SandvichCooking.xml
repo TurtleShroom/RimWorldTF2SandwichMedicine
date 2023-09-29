@@ -20,6 +20,7 @@
 					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+					<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				</thingDefs>
 			</filter>
 			<count>3</count>
@@ -79,6 +80,7 @@
 				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				<li>VCE_Flour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li>VCE_RawCabbage</li>
@@ -102,6 +104,7 @@
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
@@ -140,6 +143,7 @@
 					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+					<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				</thingDefs>
 			</filter>
 			<count>10</count>
@@ -199,6 +203,7 @@
 				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				<li>VCE_Flour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li>VCE_RawCabbage</li>
@@ -222,6 +227,7 @@
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
@@ -260,6 +266,7 @@
 					<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 					<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 					<li MayRequire="duality.overhaul">VCE_CannedBacon</li> <!-- They say the Heavy Weapons Man wept when he tasted a Sandvich with this in it. -->
+					<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				</thingDefs>
 			</filter>
 			<count>25</count>
@@ -320,6 +327,7 @@
 				<li MayRequire="higgs.cozarkian.entomophagy">Insect_CannedMeat</li>
 				<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 				<li>VCE_Flour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li>VCE_RawCabbage</li>
@@ -343,6 +351,7 @@
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 				<li MayRequire="duality.overhaul">VCE_CannedBacon</li>
+				<li MayRequire="sumika.nanohana">Sm_Oil_pickled_meat</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
